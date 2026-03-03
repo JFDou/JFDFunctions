@@ -22,7 +22,7 @@ function to make volcano plot of epigenome-wide association results with
      - if pct_include=F, then only first two slots for above/below threshold are used  
 
 # qq_plot:
-function to make qq-plot from limma topTable results of epigenome-wide association results  
+function to make qq-plot from summary of epigenome-wide association results  
   
 - Inputs:
   - sshits: dataframe of results summary of EWAS  
