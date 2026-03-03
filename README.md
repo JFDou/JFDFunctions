@@ -27,3 +27,10 @@ function to make qq-plot from limma topTable results of epigenome-wide associati
 - Inputs:
   - sshits: dataframe of results summary of EWAS  
   - p_col: column name of sshits for p-values  
+
+# genomic_reg_annotation:
+function to  add genomic regulatory element annotation (promoters, 1-5kb upstream TSS, 5UTR, 3UTR, exon, intron)    
+  
+- Inputs:
+  - data: GRanges object, or something that can be turned into one (chr, start, stop columns)  
+  - preloaded.anno.data: GRanges object built by "build_annotations" function of "annotatr" package, if using function multiple times will save lot of time loading it once outside function and passing it to the function  
