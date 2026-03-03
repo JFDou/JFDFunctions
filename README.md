@@ -20,3 +20,10 @@ function to make volcano plot of epigenome-wide association results with
      - 2: points meeting pct_p_thresh and effect estimate > 0   
      - 3: points meeting pct_p_thresh and effect estimate < 0  
      - if pct_include=F, then only first two slots for above/below threshold are used  
+
+# qq_plot:
+function to make qq-plot from limma topTable results of epigenome-wide association results  
+  
+- Inputs:
+  - sshits: dataframe of results summary of EWAS  
+  - p_col: column name of sshits for p-values  
