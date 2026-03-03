@@ -5,7 +5,14 @@
 # xlim/ylim: x and y axis limits for plot, will auto calculate something if NULL
 
 qq_plot <- function(ss.hits, p_col='P.Value'){
+  
+  #need ggplot
+  if(!require(ggplot2)){
+    stop("Need ggplot2 package installed")
+  }
+  
   ss.hits$P.Value <- ss.hits[,p_col]
+  
   ggplot(ss.hits, 
          aes(y=-log(P.Value,10), 
              x=-log(ppoints(nrow(ss.hits)),10))) +

@@ -23,6 +23,10 @@ plot_volcano <- function(ss.hits, est_col="Effect.Estimate", p_col="P.Value",
                          pct_nudge=0, pct_height=6, 
                          title="", 
                          cols=c('darkslategrey','cadetblue4','cadetblue3')){
+  #need ggplot
+  if(!require(ggplot2)){
+    stop("Need ggplot2 package installed")
+  }
   
   #get betas and pvals from single sites results
   betas <- ss.hits[,est_col]
