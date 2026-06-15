@@ -34,3 +34,9 @@ function to  add genomic regulatory element annotation (promoters, 1-5kb upstrea
 - Inputs:
   - data: GRanges object, or something that can be turned into one (chr, start, stop columns)  
   - preloaded.anno.data: GRanges object built by "build_annotations" function of "annotatr" package, if using function multiple times will save lot of time loading it once outside function and passing it to the function  
+
+# format_deseq_results:
+function to clean output from deseq results of RNA expression analysis for nice output table  
+  
+- Inputs:
+  - deseq.res: results object from results or lfcShrink function  
