@@ -23,3 +23,9 @@ qq_plot <- function(ss.hits, p_col='P.Value'){
     xlab("Expected") + ylab("Observed") +
     theme(text = element_text(size=14))
 }
+
+inflation <- function(ps) {
+  chisq <- qchisq(1 - ps, 1)
+  lambda <- median(chisq) / qchisq(0.5, 1)
+  lambda
+}
